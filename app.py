@@ -36,12 +36,18 @@ if st.button('Predict'):
     st.write(f"Prediction: {'Heart Disease' if prediction == 1 else 'No Heart Disease'}")
     
     # Store user input and prediction in the database
-    db = connect_to_db() # mysql.conector.connect.cursor()
+    
+   
+    
+    """
+        db = connect_to_db() # mysql.conector.connect.cursor()
     cursor = db.cursor()
     
     query = """
-    INSERT INTO user_inputs (age, sex, bp, cholesterol, heart_disease)
+    """
+       INSERT INTO user_inputs (age, sex, bp, cholesterol, heart_disease)
     VALUES (%s, %s, %s, %s, %s)
+    """
     """
     cursor.execute(query, (age, sex, bp, cholesterol, int(prediction)))
     db.commit()
@@ -50,3 +56,4 @@ if st.button('Predict'):
     
     cursor.close()
     db.close()
+    """
