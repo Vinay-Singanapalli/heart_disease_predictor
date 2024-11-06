@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 log = joblib.load("heart.pkl")
-scaler = joblib.load("scalar.pkl")
+scaler = joblib.load("Scalar.pkl")
 # MySQL connection
 def connect_to_db():
     return mysql.connector.connect(
